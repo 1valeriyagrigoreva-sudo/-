@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumina Indigo - Детали задачи</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift {
+            transition: background-color 0.3s ease;
+        }
+        .progress-aura {
+            filter: blur(40px);
+            opacity: 0.15;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf8fe;
+            color: #32313b;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#5f5e68",
+                        "on-secondary": "#fbf7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#755478",
+                        "error": "#a8364b",
+                        "on-primary": "#fbf7ff",
+                        "surface-container-high": "#eae6f1",
+                        "background": "#fcf8fe",
+                        "on-tertiary": "#fff7fa",
+                        "on-error": "#fff7f7",
+                        "secondary-container": "#e3e0f9",
+                        "outline-variant": "#b3b0bc",
+                        "primary": "#5b5a8b",
+                        "on-secondary-container": "#505064",
+                        "outline": "#7b7984",
+                        "on-primary-fixed": "#232250",
+                        "surface": "#fcf8fe",
+                        "primary-dim": "#4e4e7f",
+                        "on-primary-container": "#383766",
+                        "error-dim": "#6b0221",
+                        "on-error-container": "#6e0523",
+                        "tertiary-container": "#fcd2fe",
+                        "inverse-surface": "#0e0e12",
+                        "tertiary-fixed-dim": "#eec4ef",
+                        "tertiary-dim": "#68486c",
+                        "secondary": "#5e5d72",
+                        "on-surface": "#32313b",
+                        "primary-fixed-dim": "#afaee5",
+                        "on-secondary-fixed-variant": "#5a596f",
+                        "surface-container-low": "#f6f2fa",
+                        "on-primary-fixed-variant": "#414070",
+                        "on-tertiary-fixed-variant": "#6f4e73",
+                        "surface-variant": "#e4e1ed",
+                        "inverse-primary": "#bdbcf4",
+                        "tertiary-fixed": "#fcd2fe",
+                        "on-background": "#32313b",
+                        "secondary-fixed-dim": "#d4d2eb",
+                        "on-tertiary-fixed": "#513355",
+                        "on-secondary-fixed": "#3e3d51",
+                        "surface-tint": "#5b5a8b",
+                        "error-container": "#f97386",
+                        "surface-bright": "#fcf8fe",
+                        "on-tertiary-container": "#654568",
+                        "primary-fixed": "#bdbcf4",
+                        "surface-container-highest": "#e4e1ed",
+                        "inverse-on-surface": "#9e9ca2",
+                        "secondary-dim": "#525166",
+                        "secondary-fixed": "#e3e0f9",
+                        "surface-dim": "#dbd8e4",
+                        "primary-container": "#bdbcf4",
+                        "surface-container": "#f0ecf6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r-0 bg-slate-50 dark:bg-slate-900 flex flex-col py-8 px-4 z-50">
+<div class="mb-10 px-4">
+<h1 class="text-xl font-bold text-[#5C59E8] dark:text-[#7C79FF] tracking-tighter">Lumina Indigo</h1>
+<div class="flex items-center gap-3 mt-8">
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full" data-alt="professional headshot of a creative director in a soft lit studio environment with neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpMaHeZOHmZhuNntQEdEqAmZIQUcw1scXMhvwjDWjcFt8RLmQW15-DNmpo8YHN2T07wNvUY9--i5nDfY-9OHvd-TaS-Lcshfmvbic8_FN22NAC0Qj4vXf5fgmxNQj89lzgSIpiVA5Ox1pRh186mNYEz7x40DMMZAsmsY6D_F8r9v7XYd_AuTtzZic0XbPLzbVKJ_ZBPqxFFl3pWwRbxWtrYPx2DtbnTvTDEpthRX7NF0sf5BOCyetecTltaOepJ1GloqHixnap7vau"/>
+<div>
+<p class="font-manrope tracking-tight font-bold text-sm text-on-surface">Lumina Indigo</p>
+<p class="text-xs text-slate-500">Task Curator</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#5C59E8] transition-all duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 font-manrope tracking-tight font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5C59E8] dark:text-[#7C79FF] font-semibold bg-white dark:bg-slate-800 rounded-r-full shadow-sm font-manrope tracking-tight text-sm translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span>Tasks</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#5C59E8] transition-all duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 font-manrope tracking-tight font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_view_week">calendar_view_week</span>
+<span>Weekly Plan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#5C59E8] transition-all duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 font-manrope tracking-tight font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span>Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#5C59E8] transition-all duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 font-manrope tracking-tight font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<button class="mt-auto mx-4 bg-gradient-to-br from-primary to-primary-dim text-on-primary py-3 px-6 rounded-xl font-medium shadow-[0px_12px_32px_rgba(91,90,139,0.06)] flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+            New Task
+        </button>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl flex justify-between items-center px-8 h-16 w-full">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full text-sm focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="Поиск задач или комментариев..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6 ml-8">
+<button class="text-slate-400 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-slate-400 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 pb-12 px-12 min-h-screen">
+<div class="max-w-7xl mx-auto flex gap-12">
+<!-- Content Area (Left Column) -->
+<div class="flex-1 space-y-10">
+<!-- Task Header -->
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-error/10 text-error text-[10px] font-bold tracking-widest uppercase">Высокий приоритет</span>
+<span class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container text-[10px] font-bold tracking-widest uppercase">В процессе</span>
+</div>
+<h2 class="text-4xl font-extrabold text-on-surface tracking-tight leading-tight max-w-3xl">Разработка концепции визуальной идентификации для Lumina Indigo</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Создание уникального дизайн-кода, который подчеркивает нашу приверженность "Эфирной продуктивности". Задача включает в себя выбор типографики, палитры и системы сеток.</p>
+</div>
+<!-- Subtasks Section -->
+<section class="bg-surface-container-low rounded-xl p-8 space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="text-xl font-bold tracking-tight">Подзадачи</h3>
+<span class="text-sm font-medium text-primary">3 из 5 выполнено</span>
+</div>
+<div class="space-y-3">
+<!-- Task Item -->
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-lg group hover:bg-surface-container-high transition-all">
+<input checked="" class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="flex-1 text-on-surface line-through opacity-50">Определить ключевые шрифтовые пары</span>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover:opacity-100 transition-opacity" data-icon="drag_indicator">drag_indicator</span>
+</div>
+<!-- Task Item -->
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-lg group hover:bg-surface-container-high transition-all">
+<input checked="" class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="flex-1 text-on-surface line-through opacity-50">Создание палитры "Атмосферный Пурпур"</span>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover:opacity-100 transition-opacity" data-icon="drag_indicator">drag_indicator</span>
+</div>
+<!-- Task Item -->
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-lg group hover:bg-surface-container-high transition-all">
+<input checked="" class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="flex-1 text-on-surface line-through opacity-50">Настройка системы сеток и отступов</span>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover:opacity-100 transition-opacity" data-icon="drag_indicator">drag_indicator</span>
+</div>
+<!-- Task Item -->
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-lg group hover:bg-surface-container-high transition-all">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="flex-1 text-on-surface font-medium">Подготовка финального гайдлайна</span>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover:opacity-100 transition-opacity" data-icon="drag_indicator">drag_indicator</span>
+</div>
+<!-- Task Item -->
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-lg group hover:bg-surface-container-high transition-all">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+<span class="flex-1 text-on-surface font-medium">Презентация команде</span>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover:opacity-100 transition-opacity" data-icon="drag_indicator">drag_indicator</span>
+</div>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold text-sm hover:opacity-80 transition-opacity pt-2">
+<span class="material-symbols-outlined text-base" data-icon="add_circle">add_circle</span>
+                        Добавить подзадачу
+                    </button>
+</section>
+<!-- Discussion Area -->
+<section class="space-y-6">
+<h3 class="text-xl font-bold tracking-tight">Обсуждение</h3>
+<div class="space-y-8 relative">
+<!-- Timeline Line -->
+<div class="absolute left-[20px] top-4 bottom-4 w-px bg-outline-variant opacity-30"></div>
+<!-- Comment -->
+<div class="flex gap-4 relative">
+<img alt="Commenter Avatar" class="w-10 h-10 rounded-full z-10" data-alt="portrait of a young woman with creative glasses and a warm smile in a brightly lit office studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcP8el1x1-pNVXI8iWaxvEnq3j02rPNSmRhSc6r1StLZYQ_MBj7xA0ONBbKOf4iTxQsywYGcUW-s1LRdsjZH_VQhrtO63p9U02hLPJogjRuuPrn9reIfzKO0GaXjp4S2aZ_8SibHr6_2s49wXcm2sgerrH30DQYjIGU-PfmL1wdZ2wbnrhSZFsW2G7PQzTqo15hr7mzK1ND6mdLwsTIBjk6z18XJxIi9TvAACigrk0AqXJgXllJivty5x2DRQySG_kWdkn2B5QYHFY"/>
+<div class="flex-1 space-y-2">
+<div class="flex items-center gap-3">
+<span class="font-bold text-sm">Анна Волкова</span>
+<span class="text-xs text-on-surface-variant">12:45 Вчера</span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl rounded-tl-none border-none">
+<p class="text-sm leading-relaxed">Добавила обновленные иконки в Figma. Проверь, пожалуйста, подходят ли они под новый стиль "Эфирной продуктивности".</p>
+</div>
+<div class="flex gap-4 pt-1">
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors">Ответить</button>
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors">Реакция</button>
+</div>
+</div>
+</div>
+<!-- Comment -->
+<div class="flex gap-4 relative">
+<img alt="Commenter Avatar" class="w-10 h-10 rounded-full z-10" data-alt="professional man with a beard and dark sweater looking thoughtfully at the camera, modern office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgiy0O00b2hGpO0CNZIOR-geW-EWoP-Plb3gBSUVdk34Sn8F2o87LpzAoYkndJEGZrbvxOyuVSEcxKw_ircK2G32-0MX8O4xXNA0fjL-xWlV8vVHUK8f7GHCIVYf_jhXkoV87A8eH18vK8O9BaGCG4Z3TplwDns6u_HQZ11qvURiqRL0RFDdqlTw6a9qyCHoA11RHdJEPHZGzg73qMWkdQBFqe5v95o7BvEjPH9p7bKtcwOlUYrE6otbf4b6Q9tQ_nFR-Sfyr6njBO"/>
+<div class="flex-1 space-y-2">
+<div class="flex items-center gap-3">
+<span class="font-bold text-sm">Дмитрий Соколов</span>
+<span class="text-xs text-on-surface-variant">09:30 Сегодня</span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl rounded-tl-none border-none">
+<p class="text-sm leading-relaxed">Цветовая палитра выглядит отлично! Мягкие переходы действительно снижают визуальный шум. Продолжаем в том же духе.</p>
+</div>
+<div class="flex gap-4 pt-1">
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors">Ответить</button>
+<button class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors">Реакция</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Add Comment -->
+<div class="flex gap-4 pt-6">
+<img alt="My Avatar" class="w-10 h-10 rounded-full" data-alt="placeholder avatar for the current user in a soft purple circle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-dmZ-v_wPu8DPuQlcfIOyonC5e9R7OXklVPEgO2k3i_jdB-0HQtIZEZvYgEVBCNQYJ-820YRu-355pH50d7JZHdXAwgUxN1coJdp23ZsKH8lwxCAxJBsHGBDUE5eJNiyN3nTAseBP1fUIgVAofeeMEYiNp4zJq0zK4XkaRAgndYrySHmwUUTqTAFqfz6bshwFOge6zVpfE1NncjgyPyd4dMl3jeFTJtG5IFqTjWE66BFKfmw2tjkUa-N2NUL_QU-ZhXPyuHADPchy"/>
+<div class="flex-1 relative">
+<textarea class="w-full bg-surface-container-low border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all resize-none" placeholder="Напишите комментарий..." rows="3"></textarea>
+<div class="absolute right-3 bottom-3">
+<button class="bg-primary text-on-primary p-2 rounded-lg hover:scale-95 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined text-base" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar (Right Column) -->
+<aside class="w-80 space-y-8">
+<!-- Project Progress Card -->
+<section class="bg-surface-container-lowest p-6 rounded-xl relative overflow-hidden">
+<div class="progress-aura absolute inset-0 bg-primary-container"></div>
+<div class="relative z-10 space-y-4">
+<h4 class="text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">Прогресс проекта</h4>
+<div class="flex items-end justify-between">
+<span class="text-4xl font-extrabold tracking-tighter">64%</span>
+<span class="text-xs text-on-surface-variant mb-1">Осталось 3 этапа</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[64%] rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Task Metadata -->
+<div class="space-y-6 px-2">
+<!-- Detail Row -->
+<div class="space-y-2">
+<span class="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">Исполнитель</span>
+<div class="flex items-center gap-3">
+<img alt="Assignee" class="w-8 h-8 rounded-full" data-alt="professional headshot profile icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiHqk0ZWOlwdA9v4_Oxiei5MPca2ipBxeLJ2_NwWEMImMkE0TNmoBdlcEs71QI7ft_ofHn2jri1bnpCti_nbJgz-y7nLk8UigSMGBYXbwAlbIys6BbAaKqhIMCqLSU6174_7oMtc0shilFPmkJk_5eJuiZno1VUfM7c2oOPDWMxWZ5567SW550HTHpY3U7B15APyo6nBv2e989WSyfw-QQGo0G2W5Pvf-XUWMuDZB1d60xgQbZDckI2AK0DZ9byPDOh0s2zndpPUhd"/>
+<span class="text-sm font-semibold">Иван Петров</span>
+</div>
+</div>
+<!-- Detail Row -->
+<div class="space-y-2">
+<span class="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">Дедлайн</span>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-lg text-primary" data-icon="calendar_today">calendar_today</span>
+<span class="font-semibold">24 Июня, 2024</span>
+</div>
+</div>
+<!-- Detail Row -->
+<div class="space-y-2">
+<span class="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">Теги</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-container-high rounded text-[11px] font-medium text-secondary">Дизайн</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-[11px] font-medium text-secondary">UI/UX</span>
+<span class="px-2 py-1 bg-surface-container-high rounded text-[11px] font-medium text-secondary">Брендинг</span>
+</div>
+</div>
+<!-- Detail Row -->
+<div class="space-y-2">
+<span class="text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">Файлы</span>
+<div class="space-y-2">
+<a class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="description">description</span>
+<div class="flex-1 overflow-hidden">
+<p class="text-xs font-bold truncate">Styleguide_v2.pdf</p>
+<p class="text-[10px] text-on-surface-variant">4.2 MB</p>
+</div>
+<span class="material-symbols-outlined text-sm opacity-40" data-icon="download">download</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="image">image</span>
+<div class="flex-1 overflow-hidden">
+<p class="text-xs font-bold truncate">Logo_Main_Final.svg</p>
+<p class="text-[10px] text-on-surface-variant">1.1 MB</p>
+</div>
+<span class="material-symbols-outlined text-sm opacity-40" data-icon="download">download</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full py-4 px-6 border-2 border-outline-variant border-opacity-15 rounded-xl font-bold text-sm hover:bg-surface-container-low transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+                    Поделиться доступом
+                </button>
+</aside>
+</div>
+</main>
+</body></html>

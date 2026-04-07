@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumina Indigo - Задачи</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#5f5e68",
+                    "on-secondary": "#fbf7ff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#755478",
+                    "error": "#a8364b",
+                    "on-primary": "#fbf7ff",
+                    "surface-container-high": "#eae6f1",
+                    "background": "#fcf8fe",
+                    "on-tertiary": "#fff7fa",
+                    "on-error": "#fff7f7",
+                    "secondary-container": "#e3e0f9",
+                    "outline-variant": "#b3b0bc",
+                    "primary": "#5b5a8b",
+                    "on-secondary-container": "#505064",
+                    "outline": "#7b7984",
+                    "on-primary-fixed": "#232250",
+                    "surface": "#fcf8fe",
+                    "primary-dim": "#4e4e7f",
+                    "on-primary-container": "#383766",
+                    "error-dim": "#6b0221",
+                    "on-error-container": "#6e0523",
+                    "tertiary-container": "#fcd2fe",
+                    "inverse-surface": "#0e0e12",
+                    "tertiary-fixed-dim": "#eec4ef",
+                    "tertiary-dim": "#68486c",
+                    "secondary": "#5e5d72",
+                    "on-surface": "#32313b",
+                    "primary-fixed-dim": "#afaee5",
+                    "on-secondary-fixed-variant": "#5a596f",
+                    "surface-container-low": "#f6f2fa",
+                    "on-primary-fixed-variant": "#414070",
+                    "on-tertiary-fixed-variant": "#6f4e73",
+                    "surface-variant": "#e4e1ed",
+                    "inverse-primary": "#bdbcf4",
+                    "tertiary-fixed": "#fcd2fe",
+                    "on-background": "#32313b",
+                    "secondary-fixed-dim": "#d4d2eb",
+                    "on-tertiary-fixed": "#513355",
+                    "on-secondary-fixed": "#3e3d51",
+                    "surface-tint": "#5b5a8b",
+                    "error-container": "#f97386",
+                    "surface-bright": "#fcf8fe",
+                    "on-tertiary-container": "#654568",
+                    "primary-fixed": "#bdbcf4",
+                    "surface-container-highest": "#e4e1ed",
+                    "inverse-on-surface": "#9e9ca2",
+                    "secondary-dim": "#525166",
+                    "secondary-fixed": "#e3e0f9",
+                    "surface-dim": "#dbd8e4",
+                    "primary-container": "#bdbcf4",
+                    "surface-container": "#f0ecf6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift {
+            transition: background-color 0.3s ease;
+        }
+        .progress-aura {
+            filter: blur(8px);
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- SideNavBar (Shared Component) -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r-0 bg-slate-50 dark:bg-slate-900 flex flex-col py-8 px-4 z-50">
+<div class="mb-10 px-4">
+<h1 class="text-xl font-bold text-[#5C59E8] dark:text-[#7C79FF] tracking-tighter font-headline">Lumina Indigo</h1>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#5C59E8] dark:hover:text-[#7C79FF] transition-all duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 font-manrope tracking-tight font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<!-- Active State: Tasks -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#5C59E8] dark:text-[#7C79FF] font-semibold bg-white dark:bg-slate-800 rounded-r-full shadow-sm translate-x-1 transition-transform font-manrope tracking-tight text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+                Tasks
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#5C59E8] dark:hover:text-[#7C79FF] transition-all duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 font-manrope tracking-tight font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_view_week">calendar_view_week</span>
+                Weekly Plan
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#5C59E8] dark:hover:text-[#7C79FF] transition-all duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 font-manrope tracking-tight font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+                Analytics
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-[#5C59E8] dark:hover:text-[#7C79FF] transition-all duration-300 ease-in-out hover:bg-slate-100 dark:hover:bg-slate-800 font-manrope tracking-tight font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto px-4">
+<button class="w-full bg-gradient-to-br from-primary to-primary-dim text-on-primary py-3 px-4 rounded-xl font-headline font-semibold shadow-[0px_12px_32px_rgba(91,90,139,0.06)] hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                New Task
+            </button>
+<div class="mt-8 flex items-center gap-3 border-t border-slate-200 dark:border-slate-800 pt-6">
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full bg-surface-container-high" data-alt="close-up professional headshot of a creative person with soft natural lighting and minimalist studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA691LUD47mFZTsexfRULPVYZ38SP5Dc8l955zDvU_dEwpVykTK3fEnYtUjBvbYKPRqurefmsp0ywLKY5nx-XnGaw3nPx06beWxXKdQkn6Fsu2K5D61EJnU7aUZjCVpSuFaL-WIKtn_IQ7kXGSuQeMHiPRzs_ppsnYzxqXQ67UxD9RvAMVuEO0qmTvrhNBxKp4NhWmH1AzOh7eCtARMRiPOa7GQsdHVSRDL-ahI5p2o5jTEJhjekLHWllS8xEUEojoqlHbnnXWl0CYU"/>
+<div>
+<p class="text-sm font-bold text-on-surface">Lumina Indigo</p>
+<p class="text-xs text-slate-500">Task Curator</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl flex justify-between items-center px-8 h-16 shadow-[0px_12px_32px_rgba(91,90,139,0.06)] font-manrope text-sm">
+<div class="flex items-center bg-surface-container-low px-4 py-2 rounded-full w-96">
+<span class="material-symbols-outlined text-slate-400 mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-sm placeholder-slate-400" placeholder="Поиск по задачам..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-400 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-400 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Canvas -->
+<section class="pt-24 px-12 pb-12">
+<div class="flex justify-between items-end mb-10">
+<div class="space-y-1">
+<h2 class="text-4xl font-headline font-extrabold tracking-tight text-on-surface">Список задач</h2>
+<p class="text-on-surface-variant text-lg">Управляйте вашими приоритетами и прогрессом</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container-low hover:bg-surface-container-high text-on-surface px-5 py-2.5 rounded-xl font-medium flex items-center gap-2 transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="filter_list">filter_list</span>
+                        Фильтры
+                    </button>
+<button class="bg-secondary-container text-on-secondary-container px-5 py-2.5 rounded-xl font-medium flex items-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="download">download</span>
+                        Export
+                    </button>
+</div>
+</div>
+<!-- Task List Presentation (Table as Curated List) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_12px_32px_rgba(91,90,139,0.06)] overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-none">
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Тип задачи</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Наименование</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Приоритет</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Статус</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Дедлайн</th>
+<th class="px-6 py-4 font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Прогресс</th>
+<th class="px-6 py-4"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<!-- Task Row 1 -->
+<tr class="group hover:bg-surface-container-low transition-colors duration-200">
+<td class="px-6 py-5">
+<span class="bg-tertiary-container text-on-tertiary-container text-xs px-3 py-1 rounded-full font-medium">Дизайн</span>
+</td>
+<td class="px-6 py-5">
+<p class="font-headline font-bold text-on-surface">Рефакторинг UI системы</p>
+<p class="text-xs text-on-surface-variant">Обновление дизайн-токенов</p>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-error font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="keyboard_double_arrow_up" style="font-variation-settings: 'FILL' 1;">keyboard_double_arrow_up</span>
+                                    Высокий
+                                </div>
+</td>
+<td class="px-6 py-5">
+<span class="flex items-center gap-2 text-primary font-medium">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                                    В работе
+                                </span>
+</td>
+<td class="px-6 py-5 text-on-surface-variant text-sm font-medium">12 Окт, 2023</td>
+<td class="px-6 py-5">
+<div class="relative w-32 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="absolute left-0 top-0 h-full bg-primary w-[65%] rounded-full"></div>
+<div class="absolute left-0 top-0 h-full bg-primary w-[65%] progress-aura"></div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant mt-1 block">65%</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Task Row 2 -->
+<tr class="group hover:bg-surface-container-low transition-colors duration-200">
+<td class="px-6 py-5">
+<span class="bg-secondary-container text-on-secondary-container text-xs px-3 py-1 rounded-full font-medium">Аналитика</span>
+</td>
+<td class="px-6 py-5">
+<p class="font-headline font-bold text-on-surface">Квартальный отчет</p>
+<p class="text-xs text-on-surface-variant">Сбор данных по KPI</p>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="drag_handle">drag_handle</span>
+                                    Средний
+                                </div>
+</td>
+<td class="px-6 py-5">
+<span class="flex items-center gap-2 text-on-surface-variant font-medium">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+                                    Ожидание
+                                </span>
+</td>
+<td class="px-6 py-5 text-on-surface-variant text-sm font-medium">15 Окт, 2023</td>
+<td class="px-6 py-5">
+<div class="relative w-32 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="absolute left-0 top-0 h-full bg-outline w-[10%] rounded-full"></div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant mt-1 block">10%</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Task Row 3 -->
+<tr class="group hover:bg-surface-container-low transition-colors duration-200">
+<td class="px-6 py-5">
+<span class="bg-primary-container text-on-primary-container text-xs px-3 py-1 rounded-full font-medium">Разработка</span>
+</td>
+<td class="px-6 py-5">
+<p class="font-headline font-bold text-on-surface">API Интеграция</p>
+<p class="text-xs text-on-surface-variant">Подключение Stripe API</p>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-error font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="keyboard_double_arrow_up" style="font-variation-settings: 'FILL' 1;">keyboard_double_arrow_up</span>
+                                    Высокий
+                                </div>
+</td>
+<td class="px-6 py-5">
+<span class="flex items-center gap-2 text-[#2e7d32] font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    Завершено
+                                </span>
+</td>
+<td class="px-6 py-5 text-on-surface-variant text-sm font-medium">08 Окт, 2023</td>
+<td class="px-6 py-5">
+<div class="relative w-32 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="absolute left-0 top-0 h-full bg-primary w-full rounded-full"></div>
+<div class="absolute left-0 top-0 h-full bg-primary w-full progress-aura"></div>
+</div>
+<span class="text-[10px] font-bold text-primary mt-1 block">100%</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Task Row 4 -->
+<tr class="group hover:bg-surface-container-low transition-colors duration-200">
+<td class="px-6 py-5">
+<span class="bg-surface-variant text-on-surface-variant text-xs px-3 py-1 rounded-full font-medium">Контент</span>
+</td>
+<td class="px-6 py-5">
+<p class="font-headline font-bold text-on-surface">Email Рассылка</p>
+<p class="text-xs text-on-surface-variant">Анонс новой версии</p>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-tertiary font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+                                    Низкий
+                                </div>
+</td>
+<td class="px-6 py-5">
+<span class="flex items-center gap-2 text-primary font-medium">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                                    В работе
+                                </span>
+</td>
+<td class="px-6 py-5 text-on-surface-variant text-sm font-medium">20 Окт, 2023</td>
+<td class="px-6 py-5">
+<div class="relative w-32 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="absolute left-0 top-0 h-full bg-primary w-[30%] rounded-full"></div>
+<div class="absolute left-0 top-0 h-full bg-primary w-[30%] progress-aura"></div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant mt-1 block">30%</span>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="bg-surface-container-low px-8 py-4 flex items-center justify-between text-xs font-medium text-on-surface-variant">
+<p>Показано 1-4 из 24 задач</p>
+<div class="flex gap-2">
+<button class="p-2 bg-surface-container-lowest rounded-lg hover:bg-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="p-2 bg-primary text-on-primary rounded-lg shadow-md">1</button>
+<button class="p-2 bg-surface-container-lowest rounded-lg hover:bg-white transition-all shadow-sm">2</button>
+<button class="p-2 bg-surface-container-lowest rounded-lg hover:bg-white transition-all shadow-sm">3</button>
+<button class="p-2 bg-surface-container-lowest rounded-lg hover:bg-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Spreadsheet Context Visual (Asymmetric Bento Element) -->
+<div class="mt-12 grid grid-cols-12 gap-8">
+<div class="col-span-8 bg-white/40 backdrop-blur-md rounded-xl p-8 border border-white/50 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-24 -mt-24 blur-3xl group-hover:bg-primary/10 transition-all duration-700"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="table_chart">table_chart</span>
+<h3 class="font-headline font-bold text-xl">Синхронизация с таблицами</h3>
+</div>
+<p class="text-on-surface-variant mb-6 max-w-md">Эти задачи автоматически импортированы из вашего рабочего документа. Любые изменения будут синхронизированы в реальном времени.</p>
+<div class="flex gap-4">
+<div class="bg-surface-container-low p-4 rounded-xl flex-1 border border-outline-variant/10">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Источник</p>
+<p class="font-bold">Project_Master_v2.xlsx</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex-1 border border-outline-variant/10">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Последнее обновление</p>
+<p class="font-bold">Сегодня, 09:41</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-4 bg-primary text-on-primary rounded-xl p-8 relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-overlay" data-alt="abstract architectural visualization of data nodes connecting with glowing purple lines and soft depth of field effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfRCk3wJAO8Psz7xm2uuxw5cgmIbKVKapY8v3RKHM__xGpiFjthmb1hgp98SzM0pn0oO_JRkwRrdaxxmEwTaWv0_V1FaRZFcYLfyP0nnr-SA9SD7PKeXl9umKhbKDmEt37KlxNj6HaJH2Tpx_dZ6JRuBd0sQaSxEU-jJb6W6yWJ5M5pJnOsW0DXcLRR9ajBGzTyG407RQGaml8bWE6BM7_cYPDruTKuEifC_1Ul-edcOZyCKcFrXzJbtdXP21sO1w_s1FXi3RiyUoz"/>
+<div class="relative z-10 flex flex-col h-full">
+<h3 class="font-headline font-bold text-xl mb-2">Статистика недели</h3>
+<p class="text-primary-container text-sm mb-auto">Вы завершили на 15% больше задач, чем на прошлой неделе. Отличная работа!</p>
+<div class="mt-6">
+<p class="text-3xl font-extrabold font-headline">12 / 24</p>
+<p class="text-[10px] uppercase tracking-widest opacity-70">Задач выполнено</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>
